@@ -1,6 +1,6 @@
 FROM python:3.9
 
-WORKDIR /usr/app/src
+WORKDIR /workspaces/${localWorkspaceFolderBasename}
 
 RUN pip install mysql-connector-python
 
