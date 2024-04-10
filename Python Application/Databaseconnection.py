@@ -18,12 +18,16 @@ print("Hello pleas enter your surname...")
 
 surname = input()
 
-cursor = connection.cursor()
-cursor.execute('Select ID FROM users WHERE FirstName = ' + firstname +' Surname = ' + surname)
-userID = cursor.fetchall()
+userinput = "Select UserID FROM users WHERE firstName = '" + firstname + "' AND surname = '" + surname + "';"
 
+cursor = connection.cursor()
+cursor.execute(userinput)
+userID = [row[0] for row in cursor.fetchall()]
+ 
 print(userID)
 
+
+print("Enter your first number for the calculation")
 
 #cursor = connection.cursor()
 #cursor.execute('INSERT INTO users (FirstName, Surname) VALUES("Bill", "Test");')

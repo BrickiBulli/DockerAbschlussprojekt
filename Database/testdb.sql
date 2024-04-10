@@ -12,9 +12,9 @@ VALUES("Josua", "Kuenz"), ("Simon", "Fäs"), ("Levin", "Frankhauser"), ("Simon",
 
 CREATE TABLE IF NOT EXISTS calculatorHistory(
     ID int not null AUTO_INCREMENT,
-    Result int NOT NULL,
-    FirstNumber int NOT NULL,
-    SecondNumber int NOT NULL,
+    Result float NOT NULL,
+    FirstNumber float NOT NULL,
+    SecondNumber float NOT NULL,
     Operation varchar(10) NOT NULL,
     UserID int NOT NULL,
     PRIMARY KEY(ID),
